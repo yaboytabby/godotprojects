@@ -1,0 +1,20 @@
+[gd_scene load_steps=4 format=3 uid="uid://wf6kqt2kwec3"]
+
+[ext_resource type="Script" path="res://PlayerCharacter.gd" id="1_ur5e1"]
+[ext_resource type="Texture2D" uid="uid://c83r2j7bfpqn" path="res://New Piskel-1.png(2).png" id="2_yasal"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_v4r2e"]
+size = Vector2(41, 74)
+
+[node name="Playerbase" type="Area2D"]
+
+[node name="PlayerCharacter" type="CharacterBody2D" parent="."]
+script = ExtResource("1_ur5e1")
+
+[node name="PlayerHitbox" type="CollisionShape2D" parent="PlayerCharacter"]
+position = Vector2(2.5, 16)
+shape = SubResource("RectangleShape2D_v4r2e")
+
+[node name="Sprite2D" type="Sprite2D" parent="PlayerCharacter"]
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("2_yasal")
